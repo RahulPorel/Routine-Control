@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Taking app</title>
+
+    <!-- fonts below -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome cdn below (for icons..) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- iconscout Link for icons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <!-- favicon link for main logo -->
+    <!-- <link rel="icon" href="http://www.yourwebsite.com/favicon.png"> -->
+    <!-- stylesheet below  -->
+    <link rel="stylesheet" href="notes_style.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="sidebar-check" />
+    <label class="sidebar-label" for="sidebar-check">
+      <i class="fas fa-bars" id="sidebar-check-btn"> </i>
+      <i class="fas fa-times" id="sidebar-check-cancel"> </i>
+    </label>
+    <div class="sidebar">
+      <div class="sidebar-header">Routine Control</div>
+      <ul class="sidebar-ul">
+        <li class="sidebar-li">
+          <a class="sidebar-a-tag" href="/To_Do_List_App/index.html">
+            <i class="fas fa-qrcode sidebar-i-class-padding">
+              &nbsp; M Y &nbsp; T O D O
+            </i>
+          </a>
+        </li>
+
+        <li class="sidebar-li">
+          <a class="sidebar-a-tag" href="/module/Error_404_Dev_Stage/dev.html">
+            <i style="color: aqua" class="fas fa-link sidebar-i-class-padding"
+              >&nbsp; M Y &nbsp; N O T E S</i
+            >
+          </a>
+        </li>
+
+        <li class="sidebar-li">
+          <a class="sidebar-a-tag" href="/module/Error_404_Dev_Stage/dev.html">
+            <i class="fas fa-calendar-week sidebar-i-class-padding"
+              >&nbsp; M Y &nbsp; C L O C K</i
+            >
+          </a>
+        </li>
+        <li class="sidebar-li">
+          <a class="sidebar-a-tag" href="/module/Error_404_Dev_Stage/dev.html">
+            <i class="fas fa-question-circle sidebar-i-class-padding"
+              >&nbsp; A B O U T &nbsp; D E V</i
+            >
+          </a>
+        </li>
+
+        <li class="sidebar-li">
+          <a class="sidebar-a-tag" href="/module/Error_404_Dev_Stage/dev.html">
+            <i class="fas fa-envelope sidebar-i-class-padding"
+              >&nbsp; C O N T A C T
+            </i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- // main -->
+    <div class="popup-box">
+      <div class="popup">
+        <div class="content">
+          <header>
+            <p>Add a new Note</p>
+            <i class="uil uil-times"></i>
+          </header>
+          <form action="#">
+            <div class="row title">
+              <label for="">Title</label>
+              <input type="text" id="title" />
+            </div>
+            <div class="row description">
+              <label> Description</label>
+              <textarea id="desc-textarea"></textarea>
+            </div>
+            <button id="add-notes">Add Note</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <li class="add-box">
+        <div class="icon">
+          <i class="uil uil-plus"></i>
+        </div>
+        <p>Add new note</p>
+      </li>
+    </div>
+    <!-- logic (js) below -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
