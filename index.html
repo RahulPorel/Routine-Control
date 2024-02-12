@@ -27,7 +27,7 @@
     <!-- logic (js) below -->
     <script src="/To_Do_List_App/todo_script.js" defer type="module"></script>
   </head>
-  <body>
+  <body id="theme">
     <input type="checkbox" id="sidebar-check" />
     <label class="sidebar-label" for="sidebar-check">
       <i class="fas fa-bars" id="sidebar-check-btn"> </i>
@@ -37,7 +37,7 @@
       <div class="sidebar-header">&nbsp;&nbsp;&nbsp;&nbsp;Routine control</div>
       <ul class="sidebar-ul">
         <li class="sidebar-li">
-          <a class="sidebar-a-tag" href="/To_Do_List_App/index.html">
+          <a class="sidebar-a-tag" href="/index.html">
             <i
               style="color: aqua"
               class="fas fa-qrcode sidebar-i-class-padding"
@@ -79,10 +79,13 @@
         </li>
       </ul>
     </div>
-
+    <!-- // btn -->
+    <div>
+      <button id="toggle-btn" class="dark-mode-toggle">Dark mode</button>
+    </div>
     <!-- // main  -->
     <header>
-      <h1>Todo List</h1>
+      <h1 class="todo-title">Todo List</h1>
     </header>
     <form>
       <input type="text" class="todo-input" />

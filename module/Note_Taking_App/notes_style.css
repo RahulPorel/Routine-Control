@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #017e7e;
+  background: #0080b3;
 }
 
 /* sidebar */
@@ -89,6 +89,33 @@ body {
 #sidebar-check:checked ~ .sidebar-label #sidebar-check-cancel {
   left: 195px;
 }
+
+/* //button */
+
+#toggle-btn {
+  width: 89px;
+  border: 1px solid #0080b3;
+  border-radius: 17px;
+  font-weight: 800;
+  position: absolute;
+  right: 40px;
+}
+
+#toggle-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.dark-mode-toggle {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.dark-mode-theme {
+  background: rgb(46, 45, 45);
+  color: black;
+}
+
 /* 
 main */
 .wrapper {

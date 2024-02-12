@@ -4,13 +4,26 @@ const todoBtn = document.querySelector(".todo-btn");
 const todoList = document.querySelector(".todo-list");
 const filterOptions = document.querySelector(".filter-todo");
 const exploreMoreShow = document.querySelector("#explore-more");
+//dark mode btn
+const toggleBtn = document.getElementById("toggle-btn");
+const theme = document.getElementById("theme");
+let darkMode = localStorage.getItem("dark-mode");
 
 // Event Listners
+toggleBtn.addEventListener("click", (e) => {
+  darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
+  if (darkMode === "disabled") {
+    toggleBtn.textContent = "Light Mode";
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+});
+
 document, addEventListener("DOMContentLoaded", getTodos);
 todoBtn.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOptions.addEventListener("click", filterTodo);
-
 
 // Functions
 
@@ -163,4 +176,27 @@ function removeLocalTodosFromLocalStorage(todo) {
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
   // todo.splice(todos.indexof(todoIndex), 1);
+}
+
+const todoTitleChangeForDarkMode = document.querySelector(".todo-title");
+
+const enableDarkMode = () => {
+  todoTitleChangeForDarkMode.style.color = "white";
+  toggleBtn.textContent = "Light Mode";
+  theme.classList.add("dark-mode-theme");
+  toggleBtn.classList.remove("dark-mode-toggle");
+  localStorage.setItem("dark-mode", "enabled");
+};
+
+const disableDarkMode = () => {
+  todoTitleChangeForDarkMode.style.color = "black";
+  toggleBtn.textContent = "Dark Mode";
+  theme.classList.remove("dark-mode-theme");
+  toggleBtn.classList.add("dark-mode-toggle");
+  localStorage.setItem("dark-mode", "disabled");
+};
+
+if (darkMode === "enabled") {
+  toggleBtn.textContent = "Light Mode";
+  enableDarkMode(); // set state of darkMode on page load
 }

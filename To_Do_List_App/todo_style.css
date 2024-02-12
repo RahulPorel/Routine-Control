@@ -10,6 +10,36 @@ body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
+
+/* //button */
+
+#toggle-btn {
+  width: 89px;
+  border: 1px solid #0080b3;
+  border-radius: 17px;
+  font-weight: 800;
+  position: absolute;
+  right: 50px;
+  margin-top: 12px;
+}
+
+#toggle-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.dark-mode-toggle {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.dark-mode-theme {
+  background: rgb(46, 45, 45);
+  color: black;
+}
+.todo-title{
+  color: black;
+}
 /* 
 
 sidebar */
@@ -218,4 +248,3 @@ select {
   pointer-events: none;
   transition: 0.25s ease;
 }
-

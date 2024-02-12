@@ -7,8 +7,20 @@ const closeIcon = popupBox.querySelector("header i");
 const titleTag = document.querySelector("#title");
 const descTag = document.querySelector("#desc-textarea");
 const addBtn = document.querySelector("#add-notes");
-
+//dark mode btn
+const toggleBtn = document.getElementById("toggle-btn");
+const theme = document.getElementById("theme");
+let darkMode = localStorage.getItem("dark-mode");
 // Event Listners
+toggleBtn.addEventListener("click", (e) => {
+  darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
+  if (darkMode === "disabled") {
+    toggleBtn.textContent = "Light Mode";
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+});
 
 addBox.addEventListener("click", () => {
   titleTag.focus();
@@ -43,7 +55,7 @@ addBtn.addEventListener("click", (e) => {
     let month = dateObj.getMonth();
     let day = dateObj.getDate();
     let year = dateObj.getFullYear();
-
+    // let bg_color_info =
     let noteInfo = {
       title: noteTitle,
       description: noteDesc,
@@ -90,10 +102,10 @@ function showNotes() {
       
           <ul class="menu">
           <div class="color-container">
-          <span id="1" onclick="(${index},color(this))" class="color cl1"></span>
-          <span id="2" onclick="(${index},color(this))" class="color cl2"></span>
-          <span onclick="(${index},color(this))" class="color cl3"></span>
-          <span onclick="(${index},color(this))" class="color cl4"></span>
+          <span id="1" onclick="(${index.red},color(this))" class="color cl1"></span>
+          <span id="2" onclick="(${index.blue},color(this))" class="color cl2"></span>
+          <span onclick="(${index.white},color(this))" class="color cl3"></span>
+          <span onclick="(${index.black},color(this))" class="color cl4"></span>
         </div>
  <li onclick="updateNote(${index},'${note.title}','${note.description}')"><i class="uil uil-pen"></i>Edit</li>
        
@@ -132,7 +144,6 @@ window.updateNote = function (noteId, title, desc) {
   popupTitle.textContent = "Update Note";
 };
 
-
 window.deleteNote = function (noteId) {
   // let confirmDel = confirm("Are you sure you want to delete this note?")
   alert("Are you sure you want to delete this note?");
@@ -142,3 +153,21 @@ window.deleteNote = function (noteId) {
   showNotes();
 };
 
+const enableDarkMode = () => {
+  toggleBtn.textContent = "Light Mode";
+  theme.classList.add("dark-mode-theme");
+  toggleBtn.classList.remove("dark-mode-toggle");
+  localStorage.setItem("dark-mode", "enabled");
+};
+
+const disableDarkMode = () => {
+  toggleBtn.textContent = "Dark Mode";
+  theme.classList.remove("dark-mode-theme");
+  toggleBtn.classList.add("dark-mode-toggle");
+  localStorage.setItem("dark-mode", "disabled");
+};
+
+if (darkMode === "enabled") {
+  toggleBtn.textContent = "Light Mode";
+  enableDarkMode(); // set state of darkMode on page load
+}

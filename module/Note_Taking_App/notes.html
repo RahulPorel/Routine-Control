@@ -31,7 +31,7 @@
     <!-- stylesheet below  -->
     <link rel="stylesheet" href="notes_style.css" />
   </head>
-  <body>
+  <body id="theme">
     <input type="checkbox" id="sidebar-check" />
     <label class="sidebar-label" for="sidebar-check">
       <i class="fas fa-bars" id="sidebar-check-btn"> </i>
@@ -41,7 +41,7 @@
       <div class="sidebar-header">Routine Control</div>
       <ul class="sidebar-ul">
         <li class="sidebar-li">
-          <a class="sidebar-a-tag" href="/To_Do_List_App/index.html">
+          <a class="sidebar-a-tag" href="/index.html">
             <i class="fas fa-qrcode sidebar-i-class-padding">
               &nbsp; M Y &nbsp; T O D O
             </i>
@@ -49,7 +49,7 @@
         </li>
 
         <li class="sidebar-li">
-          <a class="sidebar-a-tag" href="/module/Error_404_Dev_Stage/dev.html">
+          <a class="sidebar-a-tag" href="/module/Note_Taking_App/notes.html">
             <i style="color: aqua" class="fas fa-link sidebar-i-class-padding"
               >&nbsp; M Y &nbsp; N O T E S</i
             >
@@ -80,11 +80,14 @@
         </li>
       </ul>
     </div>
-
+<!-- // btn -->
+    <div>
+      <button id="toggle-btn" class="dark-mode-toggle">Dark mode</button>
+    </div>
     <!-- // main -->
     <div class="popup-box">
       <div class="popup">
-        <div class="content">
+        <div class="content" id="themeconte">
           <header>
             <p>Add a new Note</p>
             <i class="uil uil-times"></i>
@@ -111,6 +114,7 @@
         <p>Add new note</p>
       </li>
     </div>
+
     <!-- logic (js) below -->
     <script src="script.js" defer></script>
   </body>
