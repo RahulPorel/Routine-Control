@@ -1,0 +1,14 @@
+{
+  "name": "routine-control",
+  "version": "1.0.0",
+  "description": "* To do list\r   - Filter Option to easily see completed , pending & all tasks all together.\r   - Sidebar Option to easily interact with the full app which is Routine control currently some features are under development so that might not work for now.\r   - Dark Mode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rahul",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  }
+}

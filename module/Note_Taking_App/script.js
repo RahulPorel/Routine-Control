@@ -12,7 +12,7 @@ const toggleBtn = document.getElementById("toggle-btn");
 const theme = document.getElementById("theme");
 let darkMode = localStorage.getItem("dark-mode");
 // Event Listners
-toggleBtn.addEventListener("click", (e) => {
+toggleBtn.addEventListener("click", () => {
   darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
   if (darkMode === "disabled") {
     toggleBtn.textContent = "Light Mode";

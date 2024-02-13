@@ -5,12 +5,14 @@
 * To do list
   - Filter Option to easily see completed , pending & all tasks all together.
   - Sidebar Option to easily interact with the full app which is Routine control currently some features are under development so that might not work for now.
+  - Dark Mode  
     
 * Note Taking App
   - Drop-Down Option to easily edit, delete and change background as your preference.
   - in note card time,date,month and year are shown to easily known when you created the note.
   - Sidebar same as To Do List which is help you intrecate with are full app.
-
+  - Dark Mode  
+  
  # Live Demo 👁️
  https://routine-control.netlify.app/
 

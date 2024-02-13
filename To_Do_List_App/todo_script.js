@@ -45,7 +45,6 @@ function addTodo(e) {
   //Create Li
   const newTodo = document.createElement("li");
   newTodo.textContent = todoInput.value;
-  console.log(newTodo);
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
   // Create EDIT BTN
